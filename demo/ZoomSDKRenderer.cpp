@@ -24,11 +24,9 @@ void ZoomSDKRenderer::onRawDataFrameReceived(YUVRawDataI420* data)
 	std::cout << "height." << data->GetStreamHeight() << std::endl;
 	//std::cout << "sourceID." << data->GetSourceID() << std::endl;
 
-	if (data->GetStreamHeight() == 720) {
-		SaveToRawYUVFile(data);
-	}
-
-
+	// if (data->GetStreamHeight() == 720) {
+	SaveToRawYUVFile(data);
+	// }
 }
 void ZoomSDKRenderer::onRawDataStatusChanged(RawDataStatus status)
 {
